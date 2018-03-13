@@ -1,0 +1,81 @@
+testcase0. code compiles: 5/5pts
+
+testcase1. readme.pdf and their memgrind.c are well written: 20/20pts
+ 
+testcase2. free() non pointer: 9/9pts
+       
+testcase3. free out of allocated space: 9/9pts
+               
+testcase4. free pointer between two memory blocks: 10/10pts
+ 
+testcase5. free pointer before memory block: 10/10pts
+           
+testcase6. redundant free: 10/10pts
+ 
+testcase7. verify memory coherence (swap values ): 10/10pts
+ 
+testcase8. test alternation between malloc() and free(): 12/12pts=3+3+3+3
+        
+testcase9. memory saturation: 5/5pts
+
+Test case 2 (9pts):
+Expected output: free() non pointer
+Actual output:
+Pointer not found in FILE: (Test-asst1.c) on LINE: (35)
+
+
+
+Test case 3 (9pts):
+Expected output: free() that were not allocated
+Actual output:
+Pointer not found in FILE: (Test-asst1.c) on LINE: (46)
+
+
+
+Test case 4 (10pts):
+Expected output: free() that were not allocated
+Actual output:
+Pointer not found in FILE: (Test-asst1.c) on LINE: (59)
+
+
+
+Test case 5 (10pts):
+Expected output: free() that were not allocated
+Actual output:
+Pointer not found in FILE: (Test-asst1.c) on LINE: (73)
+
+
+
+Test case 6 (10pts):
+Expected output: free() two times
+Actual output:
+Pointer has been already freed in FILE: (Test-asst1.c) on LINE: (87)
+
+
+
+Test case 7 (10pts):
+Expected output: swap values: (*p7)==b, (*q7)==a
+Actual output: (*p7)==b, (*q7)==a
+
+
+
+Test case 8 (12pts):
+Expected output: test alternation btw malloc and free without segfault
+8.1: malloc(100) 25 times.
+
+8.2: free(p) 10 times.
+Pointer not found in FILE: (Test-asst1.c) on LINE: (126)
+
+8.3: malloc(100) 10 times
+
+8.4: free(p) 25 times
+Pointer not found in FILE: (Test-asst1.c) on LINE: (140)
+
+Test case 9 (5pts):
+Expected output: memory saturation
+Actual output:
+Memory depleted.  No such space for (3500) bytes in FILE: (Test-asst1.c) on LINE: (150)
+
+
+100
+Grader: Gang

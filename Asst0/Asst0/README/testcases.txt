@@ -1,0 +1,48 @@
+Testcases from Asst0 pdf:
+1: ./a.out “thing stuff otherstuff blarp”
+	blarp
+	otherstuff
+	stuff
+	thing
+
+2: ./a.out "thing1stuff2otherstuff,blarp" 
+	blarp
+	otherstuff
+	stuff
+	thing
+
+Sample testcases:
+Test length and other various delimiters.
+./a.out "s0meone pls hir3 m3h for internship plez" 
+	for
+	h
+	hir
+	internship
+	m
+	meone
+	plez
+	pls
+	s
+
+Test alphabet ranking along with node placement.
+./a.out "aand,aAnd,Aand, Aand, AAnd, and, an, a, abc, ABC"
+	AAnd
+	ABC
+	Aand
+	Aand
+	a
+	aAnd
+	aand
+	abc
+	an
+
+Empty String:
+./a.out ""
+
+Only delimiters:
+./a.out "213123123123123123"
+
+One character:
+./a.out "123a123a"
+	a
+	a
